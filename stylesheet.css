@@ -413,6 +413,7 @@ body {
 .scroll-window {
     height: 450px; /* Restricts the tall image to a nice desktop size */
     overflow-y: scroll; /* Forces vertical scrolling inside the box */
+    overflow-x: auto;
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     background: #ffffff; /* Matches the white background of the screenshot */
@@ -420,7 +421,8 @@ body {
 
 /* Make sure the image takes up the full width but retains its natural long height */
 .dashboard-img {
-    width: 100%; /* Zooms the picture in by 130% so the checkmarks and text are large and clear! */
+    width: 140%; /* Zooms the picture in by 100% so the checkmarks and text are large and clear! */
+    max-width: 140%;
     height: auto;
     display: block;
     margin: 0 auto; /* Centers it */
@@ -428,11 +430,12 @@ body {
 
 /* OPTIONAL: Customize the scrollbar so it looks premium and dark */
 .scroll-window {
-    height: 450px;
-    overflow-y: scroll;
-    overflow-x: auto; /* Adds a tiny horizontal scroll if needed for the zoom */
+    height: 480px;        /* Fixed viewport height */
+    overflow-y: scroll;   /* Explicitly forces vertical scrollability */
+    overflow-x: hidden;   /* Keeps it from shaking left to right */
     background: #ffffff;
     border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .scroll-window::-webkit-scrollbar-track {
