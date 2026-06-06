@@ -409,6 +409,7 @@ body {
     margin-bottom: 1rem;
 }
 
+
 /* THE MAGIC: This creates the fixed window with its own scrollbar */
 .scroll-window {
     height: 450px; /* Restricts the tall image to a nice desktop size */
@@ -496,28 +497,45 @@ body {
     color: #cbd5e1;
 }
 
-.sidebar-card .kofi-btn {
-    display: block;
-    width: 100%;                  /* Spans nicely across the card content width */
-    background-color: #292e38;    /* Dark sleek button background */
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
+.sidebar-card .kofi-btn,
+.sidebar-card .paypal-btn {
+    display: block !important;
+    width: 100%;                  
+    text-decoration: none !important;
+    font-size: 1.1rem !important;     
     font-weight: 500;
     padding: 0.8rem 1rem;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
     text-align: center;
+    margin-bottom: 1rem; /* Creates a clean gap between the buttons and GCash */
 }
 
+/* --- BUTTON 1: KO-FI STYLES (Sleek Dark Gray) --- */
+.sidebar-card .kofi-btn {
+    background-color: #292e38;    
+    color: #ffffff;     
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
 
 .sidebar-card .kofi-btn:hover {
     background-color: #1e2229;
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     border-color: rgba(255, 255, 255, 0.3);
-    color: #ffffff;
+}
+
+/* --- BUTTON 2: PAYPAL STYLES (Deep Premium Blue) --- */
+.sidebar-card .paypal-btn {
+    background-color: #292e38;
+    color: #ffffff;     
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-card .paypal-btn:hover {
+    background-color: #1e2229;
+    transform: translateY(-4px); 
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .sidebar-card a {
