@@ -76,7 +76,7 @@ body {
 
 .main-content {
     padding: 4rem 0;
-    background: url(../Portfolio/images/Background.jpg) center center / cover no-repeat;
+    background: url(./images/Background.jpg) center center / cover no-repeat;
     width: 100%;
     border-radius: 0.5rem;
     padding: 4rem 2rem;
