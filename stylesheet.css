@@ -16,7 +16,6 @@ body {
 
 .header {
     width: 100%;
-    max-width: 2160px;
     margin: 0 auto;
     padding: 0 1.5rem;
     background:transparent;
@@ -47,6 +46,9 @@ body {
     align-items: center;
     padding: 1.5rem 2rem;
     flex-wrap: wrap;
+    max-width: 2160px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .nav-links {
