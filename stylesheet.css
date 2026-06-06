@@ -429,7 +429,7 @@ body {
 }
 
 .sidebar-card a {
-    color: #cbd5e1;
+    color:rgba(208, 169, 117, 0.919);
     text-decoration: none;
     font-size: 1.5rem;
 }
@@ -460,6 +460,15 @@ body {
     color: #475569;
     font-size: 1rem;
 }
+
+.ad-mock-content p {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* Review Forms - next project */
+
+
 
 /* Saying starts here */
 
