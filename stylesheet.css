@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures borders/padding don't expand box widths */
+}
+
+body {
+    font-family: 'Merienda',Verdana, Geneva, Tahoma, sans-serif;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Only Header*/
+
+.header {
+    width: 100%;
+    max-width: 2160px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    background:transparent;
+    backdrop-filter: blur(3px);
+    background-color: rgba(196, 183, 183, 0.25);
+    z-index: 1000;
+   
+}
+
+
+
+/* Logo starts here */
+.logo {
+    height: 4rem;       
+    width: auto;
+}
+
+.logo img {
+    height: 100%;       /* This will now perfectly match the 4rem of the parent */
+    width: auto;        /* Keeps the logo aspect ratio intact */
+    display: block;
+}
+
+/* logo ends here  */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+    flex-wrap: wrap;
+    
+}
+
+
+.nav-links a {
+    
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #000000;
+    gap: 0.5rem;
+}
+
+.nav-links li:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+
+/* Main content starts here */
+
+.main-content {
+    padding: 4rem 0;
+    background: url(../images/Background.jpg) center center / cover no-repeat;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 4rem 2rem;
+    margin-bottom: auto;
+    
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+    padding: 0 3rem;
+}
+
+
+.left {
+    flex: 1;
+} 
+
+
+.content h2 {
+    font-size: clamp(3rem, 3vw, 3rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.content p {
+    font-size: clamp(1.5rem, 1.5vw, 1.2rem);
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.btn1 {
+    display: inline-flex;
+    background-color: rgb(22, 82, 203);
+    border-radius: 0.370rem;
+    padding: 0.30rem 0.43rem;
+    gap: 1.5rem;
+    cursor: pointer;
+    align-items: center;
+    background: transparent;
+    transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    justify-content: center;       
+}
+
+.btn1:hover {
+    color: rgb(24, 96, 240);
+    border-color: rgb(24, 96, 240);
+    transform: scale(1.1);
+}
+
+
+.left a.btn1 {
+    color: #e9dddd;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+.left a {
+    color: #e9dddd;
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(3rem, 1.5vw, 3rem);   
+    font-size: 200;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.content .img {
+    width: 100%;
+    max-width: 400px;       /* Keeps your photo at a clean size on desktop layout profiles */
+    height: auto;           /* Maintains original aspect ratio without distortion */
+    border-radius: 0.75rem; /* Keeps layout corners smoothly styled */
+    
+}
+
+/* Boxes */
+
+.worked {
+    width: 100%;
+}
+
+.worked h2.title {
+    background-color: rgba(196, 183, 183, 0.25);
+    display: flex;
+    justify-content: center;
+    color: #000000;
+    margin-top: 1rem;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    box-shadow: 0px 10px 25px rgba(145, 142, 142, 0.5); /* Modern deep drop shadow effect */
+}
+
+.main-box {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 3rem;
+    align-items: center;  
+    flex-wrap: wrap;
+
+}
+
+
+.boxes {
+    max-height: 3.5rem;
+    width: auto;
+    object-fit: contain;
+
+}
+
+
+/* Connect css */
+.page-title {
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+
+.connect-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap; /* Wraps the cards cleanly onto new lines on mobile devices */
+    padding: 2rem max(2rem, 4vw);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    width: 220px; /* Gives each card an equal width profile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(85, 83, 83, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-8px); /* Subtle lift up effect when hovered */
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.social-card .box-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 0.70rem;
+
+}
+
+.social-card p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Adjusting the shared button layout style specifically inside cards */
+.social-card .btn1 {
+    display: flex;
+    width: 100%; /* Spans across the card base */
+    padding: 0.6rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    list-style: none;
+}
+
+.social-card .btn1:hover {
+    background-color: rgb(24, 96, 240);
+    border-color: rgb(24, 96, 240);
+    color: #ffffff;
+    transform: scale(1.05); /* Slight micro-interaction scaling */
+}
+
+.social-card a {
+    text-decoration: none;
+}
+
+
+/* Connect Ends here */
+
+
+/* TIPS */
+.tip {
+    max-height: 2rem;
+    min-height: auto;
+    width: 100rem;
+    display: flex;
+
+}
+
+
+
+/* Footer starts here */
+
+.footer {
+    display: flex;
+    background-color: rgba(196, 183, 183, 0.25);
+    color: #000000;
+    padding: 1rem;
+    margin-top: auto;
+    justify-content: center;
+
+}
+
+
+/* idk */
+
+/* ==========================================
+   Projects / Dashboard Page Layout 
+   ========================================== */
+
+.dashboard-layout {
+    display: flex;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    align-items: flex-start;
+}
+
+/* Main Log Column */
+.dashboard-main {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.log-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.log-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.current-status {
+    border-left: 4px solid #3882f6; /* Accent blue highlight for what you're doing right now */
+}
+
+/* Pipeline List Items */
+.project-pipeline {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-pipeline li {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-pipeline strong {
+    display: block;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0.5rem 0 0.2rem 0;
+}
+
+.project-pipeline p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(196, 183, 183, 0.25);
+    color: #f8fafc;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Monetization Sidebar */
+.dashboard-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 2rem; /* Keeps sidebar floating nicely as they scroll */
+}
+
+.sidebar-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.sidebar-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.sidebar-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #cbd5e1;
+}
+
+.sidebar-card a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Advertisement Display Box */
+.ad-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.ad-label {
+    display: block;
+    font-size: 0.7rem;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-family: sans-serif;
+}
+
+.ad-mock-content {
+    height: 250px; /* Standard sidebar banner height profile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    font-size: 1rem;
+}
+
+/* Saying starts here */
+
+.quote {
+    background-color: rgba(196, 183, 183, 0.25);
+    display: flex;
+    width: 100%;
+    box-shadow: 0px 15px 20px #0000009c;
+    margin-bottom: 50px;
+        
+}
+
+.saying .quote-mark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Merienda", sans-serif;
+    padding: 2rem;
+    flex-wrap: wrap;
+    
+}
+
+.quote h2 {
+    font-size: 1.4rem;
+    color: #1F2937;
+    font-family: "Merienda", sans-serif;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.quote p {
+    font-size: 1.3rem;
+    color: #1F2937;
+    font-weight: 500;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: right;
+    padding: 1.5rem;
+    margin: 0.73rem;
+}
+
+/* Tablet & Smaller Desktop Screens */
+@media (max-width: 992px) {
+    .content {
+        padding: 0 1rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* Mobile Layout Shift */
+@media (max-width: 768px) {
+    /* Navbar realignment */
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Main profile split layout goes vertical */
+    .content {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .content .img {
+        max-width: 300px; /* Scales picture slightly smaller on phones */
+        margin-top: 1.5rem;
+    }
+
+    /* Learning Dashboard Column Flip */
+    .dashboard-layout {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .dashboard-sidebar {
+        position: static; /* Removes fixed sticky freeze on scrolling columns */
+        width: 100%;
+    }
+
+    /* Quote Layout Tuning */
+    .quote {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .quote p {
+        justify-content: center;
+        text-align: center;
+    }
+}
