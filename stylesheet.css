@@ -428,6 +428,16 @@ body {
     margin: 0 auto; /* Centers it */
 }
 
+.dashboard-img2 {
+    width: 100%; /* Zooms the picture in by 140% so the checkmarks and text are large and clear! */
+    max-width: 140%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers it */
+}
+
+
+
 /* OPTIONAL: Customize the scrollbar so it looks premium and dark */
 .scroll-window {
     height: 480px;        /* Fixed viewport height */
@@ -486,10 +496,44 @@ body {
     color: #cbd5e1;
 }
 
-.sidebar-card a {
-    color:rgba(208, 169, 117, 0.919);
+.sidebar-card .kofi-btn {
+    display: block;
+    width: 100%;                  /* Spans nicely across the card content width */
+    background-color: #292e38;    /* Dark sleek button background */
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-align: center;
+}
+
+
+.sidebar-card .kofi-btn:hover {
+    background-color: #1e2229;
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.sidebar-card a {
+    color: rgba(208, 169, 117, 0.919);
+    text-decoration: none;
+    
+}
+
+.sidebar-card .dashboard-img2 {
+    width: 160px;
+    max-width: 100%;      
+    height: auto;         
+    display: block;       
+    margin: 1.5rem auto;
+    border-radius: 8px;   
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
 }
 
 /* Advertisement Display Box */
@@ -634,6 +678,14 @@ body {
     .dashboard-sidebar {
         position: static; /* Removes fixed sticky freeze on scrolling columns */
         width: 100%;
+    }
+
+    .ad-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
     }
 
     /* Quote Layout Tuning */
