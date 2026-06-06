@@ -298,20 +298,6 @@ body {
 }
 
 
-
-/* Footer starts here */
-
-.footer {
-    display: flex;
-    background-color: rgba(196, 183, 183, 0.25);
-    color: #000000;
-    padding: 1rem;
-    margin-top: auto;
-    justify-content: center;
-
-}
-
-
 /* idk */
 
 /* ==========================================
@@ -399,14 +385,83 @@ body {
     letter-spacing: 0.05em;
 }
 
+/* The Card Container - matching your dark glassmorphism style */
+.dashboard-scroll-card {
+    background: rgba(196, 183, 183, 0.15);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 100%; /* Changed from max-width: 550px to fit fluidly in the left column */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-scroll-card h3 {
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.dashboard-scroll-card p {
+    color: #aaaaaa;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* THE MAGIC: This creates the fixed window with its own scrollbar */
+.scroll-window {
+    height: 450px; /* Restricts the tall image to a nice desktop size */
+    overflow-y: scroll; /* Forces vertical scrolling inside the box */
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: #ffffff; /* Matches the white background of the screenshot */
+}
+
+/* Make sure the image takes up the full width but retains its natural long height */
+.dashboard-img {
+    width: 100%; /* Zooms the picture in by 130% so the checkmarks and text are large and clear! */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers it */
+}
+
+/* OPTIONAL: Customize the scrollbar so it looks premium and dark */
+.scroll-window {
+    height: 450px;
+    overflow-y: scroll;
+    overflow-x: auto; /* Adds a tiny horizontal scroll if needed for the zoom */
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.scroll-window::-webkit-scrollbar-track {
+    background: #222222; 
+    border-radius: 0 8px 8px 0;
+}
+ 
+.scroll-window::-webkit-scrollbar-thumb {
+    background: #555555; 
+    border-radius: 4px;
+}
+
+.scroll-window::-webkit-scrollbar-thumb:hover {
+    background: #777777; 
+}
+
+
+
 /* Monetization Sidebar */
 .dashboard-sidebar {
     flex: 1;
+    min-width: 280px;      /* Establishes a firm minimum fallback size */
+    max-width: 320px;      /* Keeps it tight, clean, and proportional */
+    flex-shrink: 0;        /* THE SHIELD: Tells Flexbox to never squeeze this column */
     display: flex;
     flex-direction: column;
     gap: 2rem;
     position: sticky;
-    top: 2rem; /* Keeps sidebar floating nicely as they scroll */
+    top: 2rem; 
 }
 
 .sidebar-card {
@@ -514,6 +569,19 @@ body {
     margin: 0.73rem;
 }
 
+/* Footer starts here */
+
+.footer {
+    display: flex;
+    background-color: rgba(196, 183, 183, 0.25);
+    color: #000000;
+    padding: 1rem;
+    margin-top: auto;
+    justify-content: center;
+
+}
+
+
 /* Tablet & Smaller Desktop Screens */
 @media (max-width: 992px) {
     .content {
@@ -575,4 +643,6 @@ body {
         justify-content: center;
         text-align: center;
     }
+
+    
 }
